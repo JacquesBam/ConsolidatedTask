@@ -4,13 +4,11 @@ from .models import Book, Author
 
 # Create your views here.
 def home(request):
-    """Renders a detailed view of the selected book
-    from which the user can purchase a book
+    """Renders the index page
 
         :param HttpRequest request:
 
-        :returns: HttpResponse that renders the detail page,
-        with context from the book table
+        :returns: HttpResponse that renders the index page,
 
         :rtype: HttpResponse
     """
@@ -37,10 +35,17 @@ def detail(request, book_id):
 
 
 def author_detail(request, author_id):
-    '''Returns a detailed view of the author, with their bio and works
+    """Renders a detailed view of the selected author
+    from which the user can purchase a book
 
-    Args:
-    -author_id: the id of the selected author'''
+        :param HttpRequest request:
+        :param int author_id: the id of the selected author
+
+        :returns: HttpResponse that renders the author page,
+        with context from the author and book tables
+
+        :rtype: HttpResponse
+    """
     author = get_object_or_404(Author, pk=author_id)
     works_list = Book.objects.filter(author_id__exact=author_id)
     return render(request, 'author.html',
@@ -48,5 +53,12 @@ def author_detail(request, author_id):
 
 
 def purchased(request):
-    '''Renders the successful purchase page'''
+    """Renders the purchase page
+
+        :param HttpRequest request:
+
+        :returns: HttpResponse that renders the purchased page,
+
+        :rtype: HttpResponse
+    """
     return render(request, 'purchased.html')
