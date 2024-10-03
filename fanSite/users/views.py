@@ -10,10 +10,10 @@ def register(request):
 
         :param HttpRequest request:
 
-        :returns: HttpResponse that renders either the registration or login
-        page
+        :returns: HttpResponse that renders either the registration or login page
 
         :rtype: HttpResponse
+
     """
     if request.method == 'POST':
         form = UserCreationForm(request.POST)

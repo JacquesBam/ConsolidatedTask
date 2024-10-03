@@ -11,7 +11,9 @@ def home(request):
         :returns: HttpResponse that renders the index page,
 
         :rtype: HttpResponse
+
     """
+
     book_list = Book.objects.order_by('-pub_date')
     author_list = Author.objects
     context = {'book_list': book_list, 'author_list': author_list}
@@ -20,13 +22,13 @@ def home(request):
 
 def detail(request, book_id):
     """Renders a detailed view of the selected book
-    from which the user can purchase a book
+        from which the user can purchase a book
 
         :param HttpRequest request:
+
         :param int book_id: the id of the selected book
 
-        :returns: HttpResponse that renders the detail page,
-        with context from the book table
+        :returns: HttpResponse that renders the detail page, with context from the book table
 
         :rtype: HttpResponse
     """
@@ -39,10 +41,10 @@ def author_detail(request, author_id):
     from which the user can purchase a book
 
         :param HttpRequest request:
+
         :param int author_id: the id of the selected author
 
-        :returns: HttpResponse that renders the author page,
-        with context from the author and book tables
+        :returns: HttpResponse that renders the author page, with context from the author and book tables
 
         :rtype: HttpResponse
     """
