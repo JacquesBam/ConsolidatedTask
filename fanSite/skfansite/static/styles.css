@@ -1,0 +1,14 @@
+body
+{
+    background-image: url("/static/BG.jpg");
+}
+
+.card
+{
+    background-color: beige;
+}
+
+.navbar
+{
+    background-color: brown;
+}
