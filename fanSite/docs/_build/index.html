@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fan Site documentation &mdash; Fan Site 00.00.01 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d7bb8d4d"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Fan Site
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Fan Site documentation</a></li>
+<li><a class="reference internal" href="#sk-fansite">SK Fansite</a><ul>
+<li><a class="reference internal" href="#module-skfansite.views">Views</a><ul>
+<li><a class="reference internal" href="#skfansite.views.author_detail"><code class="docutils literal notranslate"><span class="pre">author_detail()</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.views.detail"><code class="docutils literal notranslate"><span class="pre">detail()</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.views.home"><code class="docutils literal notranslate"><span class="pre">home()</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.views.purchased"><code class="docutils literal notranslate"><span class="pre">purchased()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-skfansite.models">Models</a><ul>
+<li><a class="reference internal" href="#skfansite.models.Author"><code class="docutils literal notranslate"><span class="pre">Author</span></code></a><ul>
+<li><a class="reference internal" href="#skfansite.models.Author.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Author.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Author.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Author.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Author.author_bio"><code class="docutils literal notranslate"><span class="pre">Author.author_bio</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Author.author_id"><code class="docutils literal notranslate"><span class="pre">Author.author_id</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Author.author_name"><code class="docutils literal notranslate"><span class="pre">Author.author_name</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Author.author_pic"><code class="docutils literal notranslate"><span class="pre">Author.author_pic</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Author.book_set"><code class="docutils literal notranslate"><span class="pre">Author.book_set</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Author.dob"><code class="docutils literal notranslate"><span class="pre">Author.dob</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Author.get_next_by_dob"><code class="docutils literal notranslate"><span class="pre">Author.get_next_by_dob()</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Author.get_previous_by_dob"><code class="docutils literal notranslate"><span class="pre">Author.get_previous_by_dob()</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Author.objects"><code class="docutils literal notranslate"><span class="pre">Author.objects</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#skfansite.models.Book"><code class="docutils literal notranslate"><span class="pre">Book</span></code></a><ul>
+<li><a class="reference internal" href="#skfansite.models.Book.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Book.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Book.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.author_id"><code class="docutils literal notranslate"><span class="pre">Book.author_id</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.author_id_id"><code class="docutils literal notranslate"><span class="pre">Book.author_id_id</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.b_id"><code class="docutils literal notranslate"><span class="pre">Book.b_id</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.blurb"><code class="docutils literal notranslate"><span class="pre">Book.blurb</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.get_next_by_pub_date"><code class="docutils literal notranslate"><span class="pre">Book.get_next_by_pub_date()</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.get_previous_by_pub_date"><code class="docutils literal notranslate"><span class="pre">Book.get_previous_by_pub_date()</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.objects"><code class="docutils literal notranslate"><span class="pre">Book.objects</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.pages"><code class="docutils literal notranslate"><span class="pre">Book.pages</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.price"><code class="docutils literal notranslate"><span class="pre">Book.price</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.pub_date"><code class="docutils literal notranslate"><span class="pre">Book.pub_date</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.t_nail"><code class="docutils literal notranslate"><span class="pre">Book.t_nail</span></code></a></li>
+<li><a class="reference internal" href="#skfansite.models.Book.title"><code class="docutils literal notranslate"><span class="pre">Book.title</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#users">Users</a><ul>
+<li><a class="reference internal" href="#id1">Views</a><ul>
+<li><a class="reference internal" href="#users.views.register"><code class="docutils literal notranslate"><span class="pre">register()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id2">Models</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Fan Site</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Fan Site documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fan-site-documentation">
+<h1>Fan Site documentation<a class="headerlink" href="#fan-site-documentation" title="Link to this heading"></a></h1>
+<p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
+documentation for details.</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="sk-fansite">
+<h1>SK Fansite<a class="headerlink" href="#sk-fansite" title="Link to this heading"></a></h1>
+<section id="module-skfansite.views">
+<span id="views"></span><h2>Views<a class="headerlink" href="#module-skfansite.views" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="skfansite.views.author_detail">
+<span class="sig-prename descclassname"><span class="pre">skfansite.views.</span></span><span class="sig-name descname"><span class="pre">author_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/skfansite/views.html#author_detail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skfansite.views.author_detail" title="Link to this definition"></a></dt>
+<dd><p>Renders a detailed view of the selected author
+from which the user can purchase a book</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param HttpRequest request<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">param int author_id<span class="colon">:</span></dt>
+<dd class="field-even"><p>the id of the selected author</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse that renders the author page, with context from the author and book tables</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="skfansite.views.detail">
+<span class="sig-prename descclassname"><span class="pre">skfansite.views.</span></span><span class="sig-name descname"><span class="pre">detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">book_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/skfansite/views.html#detail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skfansite.views.detail" title="Link to this definition"></a></dt>
+<dd><p>Renders a detailed view of the selected book
+from which the user can purchase a book</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>)</p></li>
+<li><p><strong>book_id</strong> (<em>int</em>) – the id of the selected book</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>HttpResponse that renders the detail page, with context from the book table</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="skfansite.views.home">
+<span class="sig-prename descclassname"><span class="pre">skfansite.views.</span></span><span class="sig-name descname"><span class="pre">home</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/skfansite/views.html#home"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skfansite.views.home" title="Link to this definition"></a></dt>
+<dd><p>Renders the index page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>HttpResponse that renders the index page,</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="skfansite.views.purchased">
+<span class="sig-prename descclassname"><span class="pre">skfansite.views.</span></span><span class="sig-name descname"><span class="pre">purchased</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/skfansite/views.html#purchased"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skfansite.views.purchased" title="Link to this definition"></a></dt>
+<dd><p>Renders the purchase page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>HttpResponse that renders the purchased page,</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-skfansite.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-skfansite.models" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="skfansite.models.Author">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skfansite.models.</span></span><span class="sig-name descname"><span class="pre">Author</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/skfansite/models.html#Author"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skfansite.models.Author" title="Link to this definition"></a></dt>
+<dd><p>Parent class to the Author class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>models.Model</strong></p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="skfansite.models.Author.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#skfansite.models.Author.DoesNotExist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="skfansite.models.Author.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#skfansite.models.Author.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Author.author_bio">
+<span class="sig-name descname"><span class="pre">author_bio</span></span><a class="headerlink" href="#skfansite.models.Author.author_bio" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Author.author_id">
+<span class="sig-name descname"><span class="pre">author_id</span></span><a class="headerlink" href="#skfansite.models.Author.author_id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Author.author_name">
+<span class="sig-name descname"><span class="pre">author_name</span></span><a class="headerlink" href="#skfansite.models.Author.author_name" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Author.author_pic">
+<span class="sig-name descname"><span class="pre">author_pic</span></span><a class="headerlink" href="#skfansite.models.Author.author_pic" title="Link to this definition"></a></dt>
+<dd><p>Just like the FileDescriptor, but for ImageFields. The only difference is
+assigning the width/height to the width_field/height_field, if appropriate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Author.book_set">
+<span class="sig-name descname"><span class="pre">book_set</span></span><a class="headerlink" href="#skfansite.models.Author.book_set" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Author.dob">
+<span class="sig-name descname"><span class="pre">dob</span></span><a class="headerlink" href="#skfansite.models.Author.dob" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="skfansite.models.Author.get_next_by_dob">
+<span class="sig-name descname"><span class="pre">get_next_by_dob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">dob&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skfansite.models.Author.get_next_by_dob" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="skfansite.models.Author.get_previous_by_dob">
+<span class="sig-name descname"><span class="pre">get_previous_by_dob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">dob&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skfansite.models.Author.get_previous_by_dob" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Author.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#skfansite.models.Author.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="skfansite.models.Book">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">skfansite.models.</span></span><span class="sig-name descname"><span class="pre">Book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/skfansite/models.html#Book"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#skfansite.models.Book" title="Link to this definition"></a></dt>
+<dd><p>Parent class to the Book class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>models.Model</strong></p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="skfansite.models.Book.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#skfansite.models.Book.DoesNotExist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="skfansite.models.Book.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#skfansite.models.Book.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Book.author_id">
+<span class="sig-name descname"><span class="pre">author_id</span></span><a class="headerlink" href="#skfansite.models.Book.author_id" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Book.author_id_id">
+<span class="sig-name descname"><span class="pre">author_id_id</span></span><a class="headerlink" href="#skfansite.models.Book.author_id_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Book.b_id">
+<span class="sig-name descname"><span class="pre">b_id</span></span><a class="headerlink" href="#skfansite.models.Book.b_id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Book.blurb">
+<span class="sig-name descname"><span class="pre">blurb</span></span><a class="headerlink" href="#skfansite.models.Book.blurb" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="skfansite.models.Book.get_next_by_pub_date">
+<span class="sig-name descname"><span class="pre">get_next_by_pub_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">pub_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skfansite.models.Book.get_next_by_pub_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="skfansite.models.Book.get_previous_by_pub_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_pub_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">pub_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skfansite.models.Book.get_previous_by_pub_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Book.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#skfansite.models.Book.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Book.pages">
+<span class="sig-name descname"><span class="pre">pages</span></span><a class="headerlink" href="#skfansite.models.Book.pages" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Book.price">
+<span class="sig-name descname"><span class="pre">price</span></span><a class="headerlink" href="#skfansite.models.Book.price" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Book.pub_date">
+<span class="sig-name descname"><span class="pre">pub_date</span></span><a class="headerlink" href="#skfansite.models.Book.pub_date" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Book.t_nail">
+<span class="sig-name descname"><span class="pre">t_nail</span></span><a class="headerlink" href="#skfansite.models.Book.t_nail" title="Link to this definition"></a></dt>
+<dd><p>Just like the FileDescriptor, but for ImageFields. The only difference is
+assigning the width/height to the width_field/height_field, if appropriate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="skfansite.models.Book.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#skfansite.models.Book.title" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="users">
+<h1>Users<a class="headerlink" href="#users" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>Views<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<dl class="py function" id="module-users.views">
+<dt class="sig sig-object py" id="users.views.register">
+<span class="sig-prename descclassname"><span class="pre">users.views.</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/users/views.html#register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#users.views.register" title="Link to this definition"></a></dt>
+<dd><p>Renders the registration page and redirects to login
+if registration is successful</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param HttpRequest request<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>HttpResponse that renders either the registration or login page</p>
+</dd>
+<dt class="field-odd">rtype<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</section>
+<section id="id2">
+<h2>Models<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<span class="target" id="module-users.models"></span></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Jacques Bam.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

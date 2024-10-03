@@ -3,6 +3,10 @@ from django.db import models
 
 # Create your models here.
 class Author(models.Model):
+    '''Parent class to the Author class
+
+    :param models.Model:
+    '''
     author_name = models.CharField(max_length=50)
     dob = models.DateField('date of birth')
     author_id = models.IntegerField(primary_key=True)
@@ -11,6 +15,10 @@ class Author(models.Model):
 
 
 class Book(models.Model):
+    '''Parent class to the Book class
+
+    :param models.Model:
+    '''
     title = models.CharField(max_length=50)
     pub_date = models.DateField('date published')
     t_nail = models.ImageField(default='fallback.jpg', blank=True)
