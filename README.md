@@ -15,4 +15,4 @@ Once the container has been downloaded, you can run ```docker run -d -p 8000 bam
 The website has a functional website login and registration system accessible from the navbar, although the only benefit to creating an account is being able to purchase a book and you can browse any and all authors and books without logging in. 
 The splash page will have a list of available books containing links to pages that will have more information about the authors or the books themselves.
 
-[example](https://github.com/JacquesBam/gitTask2/blob/main/example.png)
+[example](https://github.com/JacquesBam/ConsolidatedTask/blob/main/example.png)
