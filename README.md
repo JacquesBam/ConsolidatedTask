@@ -7,6 +7,7 @@ Fansite is a website that lets you browse and buy books and find out about the a
 
 <a name="inst"></a>
 ## Installation
+Before you download and run the site, you'll want to set up a virtual environment using the following command: ```python -m venv C:\path\to\new\virtual\environment```. Then run ```venv-name/Scripts/activate``` to activate it. It can be deactivated by typing ```deactivate``` at any time.
 In order to run the site, you'll need to pull the container from docker, which can be done using ```docker pull bamj395/fansite```.
 Once the container has been downloaded, you can run ```docker run -d -p 8000 bamj395/fansite``` to run it. The website can then be accessed from you localhost.
 
