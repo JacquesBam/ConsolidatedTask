@@ -5,10 +5,6 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 def register(request):
-<<<<<<< HEAD
-    '''Renders the registration page and redirects to login
-      if registration is successful'''
-=======
     """Renders the registration page and redirects to login
       if registration is successful
 
@@ -19,7 +15,6 @@ def register(request):
         :rtype: HttpResponse
 
     """
->>>>>>> docs
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
